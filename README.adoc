@@ -1,4 +1,4 @@
-# Red Hat JBoss Web Server 3.1 container image
+# Red Hat JBoss Web Server 3.0 Tomcat 8 container image
 
 NOTE: Extends link:https://github.com/jboss-container-images/jboss-openjdk-image[JBoss OpenJDK image]
 
