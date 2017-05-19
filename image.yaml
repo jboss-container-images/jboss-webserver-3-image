@@ -1,0 +1,58 @@
+name: "jboss-webserver-3/webserver31-tomcat7"
+version: "3.1.0"
+from: "jboss/openjdk18-rhel7:1.0"
+user: 185
+labels:
+    - name: "org.jboss.deployments-dir"
+      value: "/opt/webserver/webapps"
+    - name: "com.redhat.deployments-dir"
+      value: "/opt/webserver/webapps"
+    - name: "com.redhat.deployments-dir"
+      value: "/opt/webserver/webapps"
+    - name: "com.redhat.dev-mode"
+      value: "DEBUG:true"
+      description: "Environment variable used to enable development mode (debugging).  A value of true will enable development mode."
+    - name: "com.redhat.dev-mode.port"
+      value: "JPDA_ADDRESS:8000"
+      description: "Environment variable used to specify the debug port.  If not set, the default Tomcat debug port will be used (8000).  Only applicable when development mode is enabled."
+envs:
+    information:
+        - name: "JBOSS_PRODUCT"
+          value: "webserver"
+        - name: "JBOSS_WEBSERVER_VERSION"
+          value: "3.1.0"
+        - name: "PRODUCT_VERSION"
+          value: "3.1.0"
+        - name: "JWS_HOME"
+          value: "/opt/webserver"
+        - name: "CATALINA_OPTS"
+          value: "-Djava.security.egd=file:/dev/./urandom"
+        - name: "JPDA_ADDRESS"
+          value: "8000"
+          description: "Specify the port to use for debugging. If not set, the default Tomcat debug port will be used (8000).  Only applicable when development mode is enabled."
+    configuration:
+        - name: DEBUG
+          example: false
+          description: "Specify true to enable development mode (debugging)."
+ports:
+    - value: 8080
+debugport: 8000
+cmd:
+    - "/opt/webserver/bin/catalina.sh"
+    - "run"
+packages:
+    - apr-util
+scripts: 
+    - package: jws-unpack-tomcat7
+      exec: run
+    - package: jws-chown
+      exec: run
+    - package: jws-debugging
+      exec: run
+    - package: jws-disable-ajp
+      exec: run
+sources:
+    - url: jws-application-servers-3.1.0-RHEL7-x86_64.zip
+      md5: 39f7d6523a2c534bd66bebdb297714b1
+dogen:
+    version: 2.0.0rc15
