@@ -56,7 +56,7 @@ sources:
       md5: 39f7d6523a2c534bd66bebdb297714b1
       hint: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=50211&product=webserver&version=3.1.0&downloadType=distributions"
 dogen:
-    version: 2.1.0
+    version: 2.4.0
     plugins:
         dist_git:
             repo: jboss-webserver-3-docker
