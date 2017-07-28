@@ -1,4 +1,4 @@
-@jboss-webserver-3
+@jboss-webserver-3/webserver31-tomcat8
 Feature: Standalone Tomcat8 tests
 
   Scenario: Check that Tomcat stats in container in a expected way
