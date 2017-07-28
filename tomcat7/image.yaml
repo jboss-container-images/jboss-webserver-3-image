@@ -21,6 +21,8 @@ envs:
       value: "3.0.3"
     - name: "PRODUCT_VERSION"
       value: "3.0.3"
+    - name: "TOMCAT_VERSION"
+      value: "7.0.59"
     - name: "JWS_HOME"
       value: "/opt/webserver"
     - name: "CATALINA_OPTS"
