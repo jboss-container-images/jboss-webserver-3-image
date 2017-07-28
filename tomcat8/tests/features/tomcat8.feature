@@ -1,4 +1,4 @@
-@webserver_tomcat8
+@jboss-webserver-3/webserver30-tomcat8
 Feature: Standalone Tomcat8 tests
 
   Scenario: Check labels in Tomcat 8 image

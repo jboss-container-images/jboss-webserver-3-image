@@ -1,3 +1,4 @@
+@jboss-webserver-3/webserver30-tomcat7
 Feature: Standalone Tomcat tests
 
   Scenario: Check labels in Tomcat image
