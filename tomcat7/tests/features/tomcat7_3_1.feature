@@ -1,4 +1,4 @@
-@webserver_tomcat7_3_0
+@jboss-webserver-3
 Feature: Standalone Tomcat7 3.1 tests
   Scenario: Check labels for Tomcat 7 3.1 image
     Given image is built
