@@ -1,4 +1,4 @@
-@webserver_tomcat7
+@jboss-webserver-3
 Feature: Standalone Tomcat7 tests
   Scenario: Check that Tomcat stats in container in a expected way
     When container is ready
