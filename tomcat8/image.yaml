@@ -55,6 +55,9 @@ sources:
     - artifact: jws-application-servers-3.1.0-RHEL7-x86_64.zip
       md5: 39f7d6523a2c534bd66bebdb297714b1
       hint: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=50211&product=webserver&version=3.1.0&downloadType=distributions"
+    - artifact: jws-application-servers-3.1.1-RHEL7-x86_64.zip
+      md5: a74c29dfc2f5431e5b106a8932745092
+      hint: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=webserver&downloadType=securityPatches&version="
 dogen:
     version: 2.4.0
     plugins:
