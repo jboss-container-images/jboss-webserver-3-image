@@ -1,19 +1,23 @@
 #!/bin/bash
-# Unpack the JWS distribution, move the relevant components into place
+# Unpack the JWS distribution, possibly patch it, move components into place,
 # then delete the rest
 set -e
 
 ADDED_DIR=/tmp/artifacts
-DISTRIBUTION_ZIP="jws-application-servers-3.1.0-RHEL7-x86_64.zip"
+DISTRIBUTION_ZIPS=$ADDED_DIR/jws-application-servers-3.1.?-RHEL7-x86_64.zip
 
 mkdir -m0755 $JWS_HOME
 
-unzip -q $ADDED_DIR/$DISTRIBUTION_ZIP
+# unzip distribution and apply any patches
+for zip in $DISTRIBUTION_ZIPS; do
+  unzip -oq "$zip"
+done
 
+# move the relevant components into place
 mv jws-3.1/tomcat7/* $JWS_HOME
 mv jws-3.1/*.txt $JWS_HOME
 mv jws-3.1/extras/jsvc $JWS_HOME/bin/
 mv jws-3.1/extras/* $JWS_HOME/extras/
 
+# tidy up
 rm -rf jws-3.1
-
