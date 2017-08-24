@@ -33,3 +33,10 @@ Feature: Standalone Tomcat7 tests
      | DEBUG        | true  |
      | JPDA_ADDRESS | 8798  |
     Then check that port 8798 is open
+
+  # https://issues.jboss.org/browse/CLOUD-1913
+  Scenario: Check if TOMCAT_VERSION env var is present
+    When container is started with env
+      | variable       | value  |
+      | TOMCAT_VERSION | 7.0.70 |
+    Then check that port 8080 is open
