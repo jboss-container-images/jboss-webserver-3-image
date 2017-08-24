@@ -23,6 +23,8 @@ envs:
       value: "3.0.3"
     - name: "PRODUCT_VERSION"
       value: "3.0.3"
+    - name: "TOMCAT_VERSION"    
+      value: "8.0.18"
     - name: "JWS_HOME"
       value: "/opt/webserver"
     - name: "CATALINA_OPTS"
@@ -59,7 +61,7 @@ sources:
       md5: b0ed58b3d2abe4830b01aca8a24ca814
       hint: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=45991&product=webserver&version=3.0.3&downloadType=securityPatches"
 dogen:
-    version: 2.1.0
+    version: 2.4.0
     plugins:
         dist_git:
             repo: jboss-webserver-3-docker
