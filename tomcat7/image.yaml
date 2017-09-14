@@ -61,7 +61,7 @@ sources:
       md5: a74c29dfc2f5431e5b106a8932745092
       hint: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=webserver&downloadType=securityPatches&version="
 dogen:
-    version: 2.4.0
+    version: 2.4.3
     plugins:
         dist_git:
             repo: jboss-webserver-3-docker
