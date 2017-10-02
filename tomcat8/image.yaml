@@ -1,8 +1,9 @@
+schema_version: 1
+
 name: "jboss-webserver-3/webserver30-tomcat8"
 description: "Red Hat JBoss Web Server 3.0 Tomcat 8 container image"
 version: "3.0.3"
 from: "jboss/openjdk18-rhel7:1.0"
-user: 185
 labels:
     - name: "org.jboss.deployments-dir"
       value: "/opt/webserver/webapps"
@@ -23,7 +24,7 @@ envs:
       value: "3.0.3"
     - name: "PRODUCT_VERSION"
       value: "3.0.3"
-    - name: "TOMCAT_VERSION"    
+    - name: "TOMCAT_VERSION"
       value: "8.0.18"
     - name: "JWS_HOME"
       value: "/opt/webserver"
@@ -39,30 +40,31 @@ ports:
     - value: 8080
     - value: 8000
       expose: false
-cmd:
-    - "/opt/webserver/bin/catalina.sh"
-    - "run"
+modules:
+      install:
+          - name: jws-unpack-tomcat8
+          - name: jws-chown
+          - name: jws-debugging
+          - name: jws-disable-ajp
 packages:
-    - apr-util
-scripts: 
-    - package: jws-unpack-tomcat8
-      exec: run
-    - package: jws-chown
-      exec: run
-    - package: jws-debugging
-      exec: run
-    - package: jws-disable-ajp
-      exec: run
-sources:
-    - artifact: jws-application-servers-3.0.3-RHEL7-x86_64.zip
+      repositories:
+          - jboss-os
+          - jboss-rhscl
+      install:
+          - apr-util
+artifacts:
+    - path: jws-application-servers-3.0.3-RHEL7-x86_64.zip
+      description: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=44391&product=webserver&version=3.0.3&downloadType=distributions"
       md5: 89b7210d09104cc9984eab150979f6e7
-      hint: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=44391&product=webserver&version=3.0.3&downloadType=distributions"
-    - artifact: jws-application-servers-3.0.3-SP1-RHEL7-x86_64.zip
+    - path: jws-application-servers-3.0.3-SP1-RHEL7-x86_64.zip
+      description: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=45991&product=webserver&version=3.0.3&downloadType=securityPatches"
       md5: b0ed58b3d2abe4830b01aca8a24ca814
-      hint: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=45991&product=webserver&version=3.0.3&downloadType=securityPatches"
-dogen:
-    version: 2.4.0
-    plugins:
-        dist_git:
-            repo: jboss-webserver-3-docker
+run:
+      user: 185
+      cmd:
+          - "/opt/webserver/bin/catalina.sh"
+          - "run"
+osbs:
+      repository:
+            name: jboss-webserver-3-docker
             branch: jb-webserver30-tomcat8
