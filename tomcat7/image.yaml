@@ -49,7 +49,6 @@ modules:
 packages:
       repositories:
           - jboss-os
-          - jboss-ocp
           - jboss-rhscl
       install:
           - apr-util
