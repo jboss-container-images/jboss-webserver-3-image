@@ -1,0 +1,5 @@
+schema_version: 1
+
+name: jws-debugging
+execute:
+    - script: run

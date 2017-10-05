@@ -1,8 +1,9 @@
+schema_version: 1
+
 name: "jboss-webserver-3/webserver31-tomcat8"
 description: "Red Hat JBoss Web Server 3.1 Tomcat 8 container image"
 version: "3.1.1"
 from: "jboss/openjdk18-rhel7:1.0"
-user: 185
 labels:
     - name: "org.jboss.deployments-dir"
       value: "/opt/webserver/webapps"
@@ -39,30 +40,30 @@ ports:
     - value: 8080
     - value: 8000
       expose: false
-cmd:
-    - "/opt/webserver/bin/catalina.sh"
-    - "run"
+modules:
+      install:
+          - name: jws-unpack-tomcat8
+          - name: jws-chown
+          - name: jws-debugging
+          - name: jws-disable-ajp
 packages:
-    - apr-util
-scripts:
-    - package: jws-unpack-tomcat8
-      exec: run
-    - package: jws-chown
-      exec: run
-    - package: jws-debugging
-      exec: run
-    - package: jws-disable-ajp
-      exec: run
-sources:
-    - artifact: jws-application-servers-3.1.0-RHEL7-x86_64.zip
+      repositories:
+          - jboss-os
+      install:
+          - apr-util
+artifacts:
+    - path: jws-application-servers-3.1.0-RHEL7-x86_64.zip
+      description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=50211&product=webserver&version=3.1.0&downloadType=distributions"
       md5: 39f7d6523a2c534bd66bebdb297714b1
-      hint: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=50211&product=webserver&version=3.1.0&downloadType=distributions"
-    - artifact: jws-application-servers-3.1.1-RHEL7-x86_64.zip
+    - path: jws-application-servers-3.1.1-RHEL7-x86_64.zip
+      description: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=webserver&downloadType=securityPatches&version="
       md5: a74c29dfc2f5431e5b106a8932745092
-      hint: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=webserver&downloadType=securityPatches&version="
-dogen:
-    version: 2.4.0
-    plugins:
-        dist_git:
-            repo: jboss-webserver-3-docker
+run:
+      user: 185
+      cmd:
+          - "/opt/webserver/bin/catalina.sh"
+          - "run"
+osbs:
+      repository:
+            name: jboss-webserver-3-docker
             branch: jb-webserver31-tomcat8
