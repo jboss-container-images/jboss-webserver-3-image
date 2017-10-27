@@ -55,7 +55,6 @@ modules:
 packages:
       repositories:
           - jboss-os
-          - jboss-rhscl
       install:
           - apr-util
 artifacts:
