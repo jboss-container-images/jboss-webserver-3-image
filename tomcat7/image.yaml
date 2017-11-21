@@ -47,6 +47,8 @@ ports:
     - value: 8000
       expose: false
 modules:
+      repositories:
+          - path: modules
       install:
           - name: jws-unpack-tomcat7
           - name: jws-chown
