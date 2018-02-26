@@ -74,4 +74,4 @@ run:
 osbs:
       repository:
             name: jboss-webserver-3-docker
-            branch: jb-webserver31-tomcat7
+            branch: jb-webserver-3.1-tomcat-7-rhel-7
