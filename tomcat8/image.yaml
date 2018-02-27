@@ -54,11 +54,6 @@ modules:
           - name: jws-chown
           - name: jws-debugging
           - name: jws-disable-ajp
-packages:
-      repositories:
-          - jboss-os
-      install:
-          - apr-util
 artifacts:
     - path: jws-application-servers-3.1.0-RHEL7-x86_64.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=50211&product=webserver&version=3.1.0&downloadType=distributions"
