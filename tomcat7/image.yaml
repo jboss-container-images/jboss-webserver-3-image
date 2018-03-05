@@ -5,6 +5,8 @@ description: "Red Hat JBoss Web Server 3.1 Tomcat 7 container image"
 version: "3.1.2"
 from: "jboss/openjdk18-rhel7:1.1"
 labels:
+    - name: "com.redhat.component"
+      value: "jboss-webserver-3-webserver31-tomcat7-container"
     - name: "org.jboss.product"
       value: "webserver-tomcat7"
     - name: "org.jboss.product.version"
@@ -73,5 +75,5 @@ run:
           - "run"
 osbs:
       repository:
-            name: jboss-webserver-3-docker
-            branch: jb-webserver31-tomcat7
+            name: containers/jboss-webserver-3
+            branch: jb-webserver-3.1-tomcat-7-rhel-7
