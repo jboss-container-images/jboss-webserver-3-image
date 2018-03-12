@@ -66,6 +66,9 @@ artifacts:
     - path: jws-application-servers-3.1.1-RHEL7-x86_64.zip
       description: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=webserver&downloadType=securityPatches&version="
       md5: a74c29dfc2f5431e5b106a8932745092
+    - path: jws-application-servers-3.1.2-RHEL7-x86_64.zip
+      description: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=webserver&downloadType=securityPatches&version="
+      md5: c55d4e033150c27e20c0fef6fc25e03c
 run:
       user: 185
       cmd:
