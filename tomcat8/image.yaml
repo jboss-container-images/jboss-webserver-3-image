@@ -2,7 +2,7 @@ schema_version: 1
 
 name: "jboss-webserver-3/webserver31-tomcat8"
 description: "Red Hat JBoss Web Server 3.1 Tomcat 8 container image"
-version: "3.1.1"
+version: "3.1.2"
 from: "jboss/openjdk18-rhel7:1.1"
 labels:
     - name: "com.redhat.component"
@@ -10,9 +10,9 @@ labels:
     - name: "org.jboss.product"
       value: "webserver-tomcat8"
     - name: "org.jboss.product.version"
-      value: "3.1.1"
+      value: "3.1.2"
     - name: "org.jboss.product.webserver-tomcat8.version"
-      value: "3.1.1"
+      value: "3.1.2"
     - name: "org.jboss.deployments-dir"
       value: "/opt/webserver/webapps"
     - name: "com.redhat.deployments-dir"
@@ -29,9 +29,9 @@ envs:
     - name: "JBOSS_PRODUCT"
       value: "webserver"
     - name: "JBOSS_WEBSERVER_VERSION"
-      value: "3.1.1"
+      value: "3.1.2"
     - name: "PRODUCT_VERSION"
-      value: "3.1.1"
+      value: "3.1.2"
     - name: "TOMCAT_VERSION"
       value: "8.0.36"
     - name: "JWS_HOME"
@@ -65,9 +65,9 @@ artifacts:
     - path: jws-application-servers-3.1.0-RHEL7-x86_64.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=50211&product=webserver&version=3.1.0&downloadType=distributions"
       md5: 39f7d6523a2c534bd66bebdb297714b1
-    - path: jws-application-servers-3.1.1-RHEL7-x86_64.zip
+    - path: jws-application-servers-3.1.2-RHEL7-x86_64.zip
       description: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=webserver&downloadType=securityPatches&version="
-      md5: a74c29dfc2f5431e5b106a8932745092
+      md5: c55d4e033150c27e20c0fef6fc25e03c
 run:
       user: 185
       cmd:
