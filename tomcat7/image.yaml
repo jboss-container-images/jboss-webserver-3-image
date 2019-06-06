@@ -2,7 +2,7 @@ schema_version: 1
 
 name: "jboss-webserver-3/webserver31-tomcat7"
 description: "Red Hat JBoss Web Server 3.1 Tomcat 7 container image"
-version: "3.1.6"
+version: "3.1.7"
 from: "rhel7:7-released"
 labels:
     - name: "com.redhat.component"
@@ -10,9 +10,9 @@ labels:
     - name: "org.jboss.product"
       value: "webserver-tomcat7"
     - name: "org.jboss.product.version"
-      value: "3.1.6"
+      value: "3.1.7"
     - name: "org.jboss.product.webserver-tomcat7.version"
-      value: "3.1.6"
+      value: "3.1.7"
     - name: "org.jboss.deployments-dir"
       value: "/opt/webserver/webapps"
     - name: "com.redhat.deployments-dir"
@@ -29,9 +29,9 @@ envs:
     - name: "JBOSS_PRODUCT"
       value: "webserver"
     - name: "JBOSS_WEBSERVER_VERSION"
-      value: "3.1.6"
+      value: "3.1.7"
     - name: "PRODUCT_VERSION"
-      value: "3.1.6"
+      value: "3.1.7"
     - name: "TOMCAT_VERSION"
       value: "7.0.70"
     - name: "JWS_HOME"
@@ -63,12 +63,14 @@ modules:
           - name: jws-debugging
           - name: jws-disable-ajp
 artifacts:
-    - path: jws-application-servers-3.1.0-RHEL7-x86_64.zip
+    - name: jws-application-servers-3.1.0-RHEL7-x86_64.zip
+      target: jws-application-servers-3.1.0-RHEL7-x86_64.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=50211&product=webserver&version=3.1.0&downloadType=distributions"
       md5: 39f7d6523a2c534bd66bebdb297714b1
-    - path: jws-application-servers-3.1.6-RHEL7-x86_64.zip
+    - name: jws-3.1.7-application-servers-RHEL7-x86_64.zip
+      target: jws-application-servers-3.1.7-RHEL7-x86_64.zip
       description: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=63891&product=webserver&version=3.1&downloadType=patches"
-      md5: d6c64c0fb48cc6353e8f92c67bcc57da
+      md5: fc990b2149c220d1e807c3c257e11de4
 run:
       user: 185
       cmd:
