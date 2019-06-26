@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-3/webserver31-tomcat8"
 description: "Red Hat JBoss Web Server 3.1 Tomcat 8 container image"
 version: "3.1.7"
-from: "rhel7:7-released"
+from: "rhel7:7.5-433.1561066496"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-3-webserver31-tomcat8-container"
@@ -70,7 +70,7 @@ artifacts:
     - name: jws-3.1.7-application-servers-RHEL7-x86_64.zip
       target: jws-application-servers-3.1.7-RHEL7-x86_64.zip
       description: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=63891&product=webserver&version=3.1&downloadType=patches"
-      md5: fc990b2149c220d1e807c3c257e11de4
+      md5: 848757b32f3f359ace10de6b885c5cde
 run:
       user: 185
       cmd:
