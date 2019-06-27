@@ -1,7 +1,7 @@
 #!/bin/bash
 # Set the ownership of the JWS software to the JWS user.
 set -e
-
+JWS_HOME=/opt/webserver
 for dir in $JWS_HOME $HOME; do
   chown -R jboss:root $dir
   chmod -R g+rwX $dir
