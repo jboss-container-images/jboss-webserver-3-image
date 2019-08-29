@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-3/webserver31-tomcat7"
 description: "Red Hat JBoss Web Server 3.1 Tomcat 7 container image"
 version: "3.1.7"
-from: "rhel7:7.5-433.1561619828"
+from: "rhel7:7-released"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-3-webserver31-tomcat7-container"
