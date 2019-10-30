@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
-
+JWS_HOME=/opt/webserver
 # disable AJP
 sed -i 's|\(<Connector.*AJP.*>\)|<!--\1-->|' "$JWS_HOME/conf/server.xml"

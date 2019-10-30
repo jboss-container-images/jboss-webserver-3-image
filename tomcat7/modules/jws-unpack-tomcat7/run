@@ -2,7 +2,7 @@
 # Unpack the JWS distribution, possibly patch it, move components into place,
 # then delete the rest
 set -e
-
+JWS_HOME=/opt/webserver
 ADDED_DIR=/tmp/artifacts
 DISTRIBUTION_ZIPS=$ADDED_DIR/jws-application-servers-3.1.?-RHEL7-x86_64.zip
 
