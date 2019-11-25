@@ -1,5 +1,5 @@
 osbs:
-      koji_target: jb-webserver-3.1-tomcat-7-dev-rhel-7-containers-candidate
+      #koji_target: jb-webserver-3.1-tomcat-7-dev-rhel-7-containers-candidate
       repository:
             name: containers/jboss-webserver-3
-            branch: private-szappis-3.6
+            branch: jb-webserver-3.1-tomcat-7-dev-rhel-7
