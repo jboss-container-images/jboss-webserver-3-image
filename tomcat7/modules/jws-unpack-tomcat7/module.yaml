@@ -2,5 +2,14 @@ schema_version: 1
 
 name: jws-unpack-tomcat7
 version: "1.0"
+artifacts:
+    - name: jws-application-servers-3.1.0-RHEL7-x86_64.zip
+      target: jws-application-servers-3.1.0-RHEL7-x86_64.zip
+      description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=50211&product=webserver&version=3.1.0&downloadType=distributions"
+      md5: 39f7d6523a2c534bd66bebdb297714b1
+    - name: jws-3.1.7-application-servers-RHEL7-x86_64.zip
+      target: jws-application-servers-3.1.7-RHEL7-x86_64.zip
+      description: "Artifact is available on the Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=63891&product=webserver&version=3.1&downloadType=patches"
+      md5: 848757b32f3f359ace10de6b885c5cde
 execute:
     - script: run
