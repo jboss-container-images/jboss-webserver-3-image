@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Unpack the JWS distribution, possibly patch it, move components into place,
 # then delete the rest
 set -e

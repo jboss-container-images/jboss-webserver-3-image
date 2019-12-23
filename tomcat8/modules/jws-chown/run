@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Set the ownership of the JWS software to the JWS user.
 set -e
 JWS_HOME=/opt/webserver
