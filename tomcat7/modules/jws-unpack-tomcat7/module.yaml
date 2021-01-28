@@ -7,9 +7,9 @@ artifacts:
       target: jws-application-servers-3.1.0-RHEL7-x86_64.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=50211&product=webserver&version=3.1.0&downloadType=distributions"
       md5: 39f7d6523a2c534bd66bebdb297714b1
-    - name: jws-3.1.11.CR1-application-servers-RHEL7-x86_64.zip
+    - name: jws-3.1.11.CR1.1-application-servers-RHEL7-x86_64.zip
       target: jws-application-servers-3.1.11-RHEL7-x86_64.zip
       description: "Artifact is available on the Customer Portal:"
-      md5: 89cbb1d221c0d063d65891fefc630952
+      md5: e07599f9b06c5fb15ae261c52d7fd0b1
 execute:
     - script: run
